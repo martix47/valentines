@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Moja walentynka</title>
+        <link rel="stylesheet" href="cssk.css">
+        <link rel="icon" href="images/favicon.ico">
+    </head>
+    <body>
+        <div class="valentine">
+            <h1 class="message">Czy będziesz moją walentynką?</h1> 
+            <div class="img">
+            <figure>
+                <img src="images/pookie.jpg" alt="pookie">
+            </figure>
+                <div class="buttons">
+            
+                    <a href="walentynki.html">
+                        <button id="yes">tak</button>
+                    </a>
+            
+                    <button id="no">nie</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const noButton = document.getElementById("no");
+                const yesButton = document.getElementById("yes");
+
+        
+                // Tablica z różnymi tekstami dla przycisku "Nie"
+                const texts = ["naprawdę?", "jeszcze raz", "jesteś pewien?", "czemó", "pookie", "really pookie", "nie rób mi tego", "ej serio", "zgódź się w końcu", "kuba serio"];
+                let yesButtonSize = 20;
+                noButton.addEventListener("mouseover", function () {
+                    // Losowanie nowej pozycji
+                    const maxX = window.innerWidth - noButton.offsetWidth;
+                    const maxY = window.innerHeight - noButton.offsetHeight;
+        
+                    const randomX = Math.floor(Math.random() * maxX);
+                    const randomY = Math.floor(Math.random() * maxY);
+        
+                    // Losowanie nowego tekstu
+                    const newText = texts[Math.floor(Math.random() * texts.length)];
+        
+                    // Przypisanie nowej pozycji i tekstu
+                    noButton.style.position = "absolute";
+                    noButton.style.left = `${randomX}px`;
+                    noButton.style.top = `${randomY}px`;
+                    noButton.textContent = newText;
+                    yesButtonSize += 7.5; // Za każdym razem rośnie o 5px
+                    yesButton.style.fontSize = `${yesButtonSize}px`;
+                    yesButton.style.padding = `${yesButtonSize / 3}px`;
+                });
+            });
+        </script>
+    </body>
+</html>
