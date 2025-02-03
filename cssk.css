@@ -1,0 +1,136 @@
+body {
+    background-image: url(images/back1.jpg);
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+.valentine {
+display: flex;
+flex-direction: column; 
+justify-content: center; 
+height: 100vh; 
+align-items: center;
+
+}
+.message {
+    background-color: rgb(89, 14, 38); 
+    padding: 10px;
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+    display: inline-block; 
+    color: rgb(255, 154, 240);
+}
+.img .img2{
+    display: flex;
+    margin-top: 0px;
+    padding: 0px;
+    
+}
+.img img{
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+}
+.img2 img{
+    width: 300px;
+}
+.buttons {
+    display: flex; /* Ustawienie przycisków w linii */
+    justify-content: center; /* Wyśrodkowanie na stronie */
+    gap: 20px; /* Odstęp między przyciskami */
+}
+#yes, #no{
+font-size: 20px;
+color: rgb(89, 14, 38);
+background-color: rgb(255, 154, 240);
+margin-top: 20px;
+margin-inline: 5px;
+border-radius: 5px;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#yes:hover, #no:hover {
+    background-color: rgb(89, 14, 38);
+    color: rgb(255, 154, 240);
+}
+h1{
+    margin-bottom: 0px;
+    padding: 0px;
+}
+figure {
+    margin: 0;
+}
+.activities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+#date-picker {
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgb(89, 14, 38);
+}
+
+/* Tabela 3x3 dla formularzy */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolumny */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Styl obrazków */
+.grid-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Powiększenie po najechaniu */
+.grid-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Ukrycie domyślnych radio buttonów */
+.grid-container input[type="radio"] {
+    display: none;
+}
+
+/* Podświetlenie wybranej opcji */
+.grid-container input[type="radio"]:checked + img {
+    border: 3px solid rgb(255, 154, 240);
+    box-shadow: 0px 0px 10px rgb(255, 154, 240);
+}
+.food img, .does img {
+    width: 120px; 
+     /* Dostosuj rozmiar */
+     height: 150px;
+    
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+#send-button {
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 10;
+    color: rgb(255, 154, 240);
+    background-color: rgb(89, 14, 38);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#send-button:hover {
+    background-color: rgb(255, 154, 240);
+    color: rgb(89, 14, 38);
+}
